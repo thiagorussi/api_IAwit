@@ -28,7 +28,7 @@ app.post('/', (req, res) => {
     sendMsg();
         // axios.get ('https://api.wit.ai/message?v=20221127&q=' + msg,
 
-        //     { headers : { Authorization: 'Bearer ' + 'EOHIDOYJHDEPXZ3V3ZKZVMVV5YR3JPXC' } }
+        //     { headers : { Authorization: 'Bearer ' + 'xxx' } }
         // )
         // .then(response => {
         //     console.log(response.data);
