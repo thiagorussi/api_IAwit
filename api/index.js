@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 
-const dotenv = require("dotenv")
-dotenv.config()
+// const dotenv = require("dotenv")
+// dotenv.config()
 
 app.use(express.json());
 
