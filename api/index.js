@@ -2,16 +2,20 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 
+const dotenv = require("dotenv")
+dotenv.config()
+
 app.use(express.json());
 
 app.post('/', (req, res) => {
     const { msg } = req.body;
-    console.log(msg);
 
     async function sendMsg() {
         await axios.get('https://api.wit.ai/message?v=20221127&q=' + msg,
 
-            { headers: { Authorization: 'Bearer ' + 'EOHIDOYJHDEPXZ3V3ZKZVMVV5YR3JPXC' } }
+            { headers: { Authorization: 'Bearer ' + process.env.WIT_TOKEN } }
+            
+            
         )
             .then(response => {
                 console.log(response.data);
